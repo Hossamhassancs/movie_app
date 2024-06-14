@@ -1,0 +1,7 @@
+<h1>All Movies</h1>
+
+<%= render 'search_form' %>
+
+<%= render partial: 'movies_table', locals: { movies_with_details: @movies_with_details } %>
+
+<%= paginate @movies %>

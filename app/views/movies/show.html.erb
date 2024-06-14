@@ -1,0 +1,27 @@
+<h1><%= @movie.title %></h1>
+<p><strong>Description:</strong> <%= @movie.description %></p>
+<p><strong>Year:</strong> <%= @movie.year %></p>
+<p><strong>Directors:</strong> <%= @directors %></p>
+<p><strong>Actors:</strong> <%= @actors %></p>
+<p><strong>Filming Locations:</strong> <%= @filming_locations %></p>
+<p><strong>Countries:</strong> <%= @countries %></p>
+
+<h2>Reviews</h2>
+<table class="reviews">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Stars</th>
+      <th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.user %></td>
+        <td><%= review.stars %></td>
+        <td><%= review.review %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

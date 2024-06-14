@@ -1,0 +1,41 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Year</th>
+      <th>Directors</th>
+      <th>Actors</th>
+      <th>Filming Locations</th>
+      <th>Countries</th>
+      <th>Average Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if movies_with_details.present? %>
+      <% movies_with_details.each do |movie_detail| %>
+        <tr>
+          <td><%= link_to movie_detail[:movie].title, movie_path(movie_detail[:movie]) %></td>
+          <td><%= movie_detail[:movie].description %></td>
+          <td><%= movie_detail[:movie].year %></td>
+          <td><%= movie_detail[:directors] %></td>
+          <td>
+            <% if params[:actor].present? %>
+              <% highlighted_actors = movie_detail[:actors].gsub(/(#{params[:actor]})/i, '<span class="highlight">\1</span>').html_safe %>
+              <%= highlighted_actors %>
+            <% else %>
+              <%= movie_detail[:actors] %>
+            <% end %>
+          </td>
+          <td><%= movie_detail[:filming_locations] %></td>
+          <td><%= movie_detail[:countries] %></td>
+          <td><%= movie_detail[:movie].average_rating %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td colspan="8">No movies found.</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
