@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  header, footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  form {
+    margin-bottom: 2em;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input[type="text"] {
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid #ced4da;
+    border-radius: 0.25em;
+  }
+  
+  form input[type="submit"] {
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+  }
+  
+  table th, table td {
+    padding: 0.75em;
+    text-align: left;
+    border: 1px solid #dee2e6;
+  }
+  
+  table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  h2 {
+    margin-top: 2em;
+  }
+  
+  table.reviews th, table.reviews td {
+    text-align: center;
+  }
+
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+
+  
